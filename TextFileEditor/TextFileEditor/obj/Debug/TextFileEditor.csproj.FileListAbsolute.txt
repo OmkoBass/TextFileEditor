@@ -1,0 +1,10 @@
+D:\Code\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.csprojAssemblyReference.cache
+D:\Code\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.Properties.Resources.resources
+D:\Code\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.csproj.GenerateResource.cache
+D:\Code\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.csproj.CoreCompileInputs.cache
+D:\Code\C#\TextFileEditor\TextFileEditor\bin\Debug\TextFileEditor.exe.config
+D:\Code\C#\TextFileEditor\TextFileEditor\bin\Debug\TextFileEditor.exe
+D:\Code\C#\TextFileEditor\TextFileEditor\bin\Debug\TextFileEditor.pdb
+D:\Code\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.exe
+D:\Code\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.pdb
+D:\Code\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.main.resources
