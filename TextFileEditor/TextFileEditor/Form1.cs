@@ -44,12 +44,20 @@ namespace TextFileEditor
 
         private void SaveToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FileStream f = new FileStream(temp, FileMode.Create, FileAccess.Write);
-            StreamWriter writer = new StreamWriter(f);
-            writer.Write(displayText.Text);
-            writer.Close();
-            f.Close();
-            displayText.Text = null;
+            if (string.IsNullOrEmpty(temp))
+            {
+                MessageBox.Show("You didn't select a file to save.");
+            }
+            else
+            {
+                FileStream f = new FileStream(temp, FileMode.Create, FileAccess.Write);
+                StreamWriter writer = new StreamWriter(f);
+                writer.Write(displayText.Text);
+                writer.Close();
+                f.Close();
+                temp = null;
+                displayText.Text = null;
+            }
         }
 
         private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,6 +78,55 @@ namespace TextFileEditor
         private void QuitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BlackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            displayText.BackColor = Color.Black;
+            displayText.ForeColor = Color.White;
+        }
+
+        private void RedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            displayText.BackColor = Color.Red;
+            displayText.ForeColor = Color.Black;
+        }
+
+        private void BlueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            displayText.BackColor = Color.Blue;
+            displayText.ForeColor = Color.White;
+        }
+
+        private void YellowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            displayText.BackColor = Color.Yellow;
+            displayText.ForeColor = Color.Black;
+        }
+
+        private void DefaultToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            displayText.BackColor = Color.White;
+            displayText.ForeColor = Color.Black;
+        }
+
+        private void FontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FontDialog f = new FontDialog();
+            if(f.ShowDialog() == DialogResult.OK)
+            {
+                displayText.Font = f.Font;
+            }
+        }
+
+        private void AboutThisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Basic Text Editor for my first C# project.");
+        }
+
+        private void HelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Open a file.\nEdit it and then save.\nYou can change the font or background color.");
         }
     }
 }
